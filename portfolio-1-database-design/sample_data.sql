@@ -45,3 +45,17 @@ VALUES
     ('LIP001', 'Lipid Profile', 'Blood', 'mg/dL'),
     ('UA001', 'Urinalysis', 'Urine', 'Various'),
     ('LFT001', 'Liver Function Test (LFT)', 'Blood', 'Various');
+
+-- =====================================================
+-- TABLE 5: LABORATORY ORDERS
+-- Insert five fictional laboratory orders
+-- =====================================================
+
+INSERT INTO lab_orders
+    (patient_id, provider_id, order_status)
+VALUES
+    (1, 1, 'Completed'),
+    (2, 2, 'In Progress'),
+    (3, 3, 'Pending'),
+    (4, 1, 'Completed'),
+    (5, 2, 'Pending');
