@@ -90,3 +90,19 @@ VALUES
     (3, 1, 'Blood', CURRENT_TIMESTAMP, 'Collected'),
     (4, 3, 'Blood', CURRENT_TIMESTAMP, 'Processed'),
     (5, 2, 'Urine', CURRENT_TIMESTAMP, 'Collected');
+
+-- =====================================================
+-- TABLE 8: TEST RESULTS
+-- Insert six fictional laboratory test results
+-- =====================================================
+
+INSERT INTO test_results
+    (order_test_id, specimen_id, result_value, result_unit,
+     is_abnormal, resulted_by)
+VALUES
+    (1, 1, 'Normal', 'Qualitative', FALSE, 1),
+    (2, 1, '7.8', 'mmol/L', TRUE, 1),
+    (3, 2, '185', 'mg/dL', FALSE, 2),
+    (4, 2, 'Negative', 'Qualitative', FALSE, 2),
+    (6, 4, 'Normal', 'Qualitative', FALSE, 3),
+    (7, 4, '220', 'mg/dL', TRUE, 3);
