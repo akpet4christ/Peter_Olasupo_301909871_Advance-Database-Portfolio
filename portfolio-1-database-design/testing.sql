@@ -21,3 +21,22 @@ INNER JOIN lab_orders lo
 INNER JOIN providers pr
     ON lo.provider_id = pr.provider_id
 ORDER BY lo.order_id;
+
+-- QUERY 2: Retrieve laboratory tests requested
+-- for each patient.
+
+SELECT
+    p.first_name AS patient_first_name,
+    p.last_name AS patient_last_name,
+    lo.order_id,
+    tc.test_name,
+    ot.priority,
+    ot.test_status
+FROM patients p
+INNER JOIN lab_orders lo
+    ON p.patient_id = lo.patient_id
+INNER JOIN order_tests ot
+    ON lo.order_id = ot.order_id
+INNER JOIN test_catalog tc
+    ON ot.test_id = tc.test_id
+ORDER BY lo.order_id;
