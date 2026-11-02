@@ -31,3 +31,17 @@ VALUES
     ('James', 'Anderson', 'Internal Medicine'),
     ('Linda', 'Thompson', 'Family Medicine'),
     ('Robert', 'Taylor', 'Pediatrics');
+
+-- =====================================================
+-- TABLE 4: TEST CATALOG
+-- Insert five laboratory tests
+-- =====================================================
+
+INSERT INTO test_catalog
+    (test_code, test_name, specimen_type, unit)
+VALUES
+    ('CBC001', 'Complete Blood Count (CBC)', 'Blood', 'Various'),
+    ('BMP001', 'Basic Metabolic Panel (BMP)', 'Blood', 'Various'),
+    ('LIP001', 'Lipid Profile', 'Blood', 'mg/dL'),
+    ('UA001', 'Urinalysis', 'Urine', 'Various'),
+    ('LFT001', 'Liver Function Test (LFT)', 'Blood', 'Various');
