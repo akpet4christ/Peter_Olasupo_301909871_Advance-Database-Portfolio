@@ -14,6 +14,17 @@ VALUES
 -- Insert three fictional healthcare providers
 -- =====================================================
 
+-- =====================================================
+-- TABLE 3: LABORATORY STAFF
+-- Insert three fictional laboratory staff members
+-- =====================================================
+
+INSERT INTO lab_staff
+    (first_name, last_name, role)
+VALUES
+    ('Daniel', 'White', 'Medical Laboratory Scientist'),
+    ('Grace', 'Martin', 'Laboratory Technician'),
+    ('Samuel', 'Clark', 'Laboratory Supervisor');
 INSERT INTO providers
     (first_name, last_name, specialty)
 VALUES
