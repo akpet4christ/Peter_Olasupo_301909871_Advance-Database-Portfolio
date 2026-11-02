@@ -79,3 +79,20 @@ INNER JOIN lab_orders lo
 LEFT JOIN lab_staff ls
     ON s.collected_by = ls.staff_id
 ORDER BY s.specimen_id;
+
+-- QUERY 5: Count the total laboratory orders
+-- placed for each patient.
+
+SELECT
+    p.patient_id,
+    p.first_name,
+    p.last_name,
+    COUNT(lo.order_id) AS total_orders
+FROM patients p
+LEFT JOIN lab_orders lo
+    ON p.patient_id = lo.patient_id
+GROUP BY
+    p.patient_id,
+    p.first_name,
+    p.last_name
+ORDER BY p.patient_id;
