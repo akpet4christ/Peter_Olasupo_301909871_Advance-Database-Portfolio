@@ -40,3 +40,24 @@ INNER JOIN order_tests ot
 INNER JOIN test_catalog tc
     ON ot.test_id = tc.test_id
 ORDER BY lo.order_id;
+
+-- QUERY 3: Retrieve patient laboratory results.
+
+SELECT
+    p.first_name AS patient_first_name,
+    p.last_name AS patient_last_name,
+    tc.test_name,
+    tr.result_value,
+    tr.result_unit,
+    tr.is_abnormal,
+    tr.resulted_at
+FROM patients p
+INNER JOIN lab_orders lo
+    ON p.patient_id = lo.patient_id
+INNER JOIN order_tests ot
+    ON lo.order_id = ot.order_id
+INNER JOIN test_catalog tc
+    ON ot.test_id = tc.test_id
+INNER JOIN test_results tr
+    ON ot.order_test_id = tr.order_test_id
+ORDER BY p.patient_id;
