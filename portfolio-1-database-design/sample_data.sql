@@ -76,3 +76,17 @@ VALUES
     (4, 5, 'Routine', 'Completed'),
     (4, 3, 'Urgent', 'Completed'),
     (5, 2, 'Routine', 'Pending');
+
+-- =====================================================
+-- TABLE 7: SPECIMENS
+-- Insert five fictional laboratory specimens
+-- =====================================================
+
+INSERT INTO specimens
+    (order_id, collected_by, specimen_type, collected_at, specimen_status)
+VALUES
+    (1, 1, 'Blood', CURRENT_TIMESTAMP, 'Processed'),
+    (2, 2, 'Blood', CURRENT_TIMESTAMP, 'Received'),
+    (3, 1, 'Blood', CURRENT_TIMESTAMP, 'Collected'),
+    (4, 3, 'Blood', CURRENT_TIMESTAMP, 'Processed'),
+    (5, 2, 'Urine', CURRENT_TIMESTAMP, 'Collected');
