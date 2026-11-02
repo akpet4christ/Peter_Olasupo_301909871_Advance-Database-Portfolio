@@ -59,3 +59,20 @@ VALUES
     (3, 3, 'Pending'),
     (4, 1, 'Completed'),
     (5, 2, 'Pending');
+
+-- =====================================================
+-- TABLE 6: ORDER TESTS
+-- Insert eight laboratory test requests
+-- =====================================================
+
+INSERT INTO order_tests
+    (order_id, test_id, priority, test_status)
+VALUES
+    (1, 1, 'Routine', 'Completed'),
+    (1, 2, 'Urgent', 'Completed'),
+    (2, 3, 'Routine', 'In Progress'),
+    (2, 4, 'Routine', 'In Progress'),
+    (3, 1, 'STAT', 'Pending'),
+    (4, 5, 'Routine', 'Completed'),
+    (4, 3, 'Urgent', 'Completed'),
+    (5, 2, 'Routine', 'Pending');
