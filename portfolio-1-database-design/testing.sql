@@ -61,3 +61,21 @@ INNER JOIN test_catalog tc
 INNER JOIN test_results tr
     ON ot.order_test_id = tr.order_test_id
 ORDER BY p.patient_id;
+
+-- QUERY 4: Retrieve specimen details and the laboratory
+-- staff members responsible for collecting them.
+
+SELECT
+    s.specimen_id,
+    lo.order_id,
+    s.specimen_type,
+    s.specimen_status,
+    ls.first_name AS staff_first_name,
+    ls.last_name AS staff_last_name,
+    s.collected_at
+FROM specimens s
+INNER JOIN lab_orders lo
+    ON s.order_id = lo.order_id
+LEFT JOIN lab_staff ls
+    ON s.collected_by = ls.staff_id
+ORDER BY s.specimen_id;
