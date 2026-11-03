@@ -23,3 +23,9 @@ Sequential scans are reasonable for the current small dataset because the databa
 ## 4. Conclusion
 
 The baseline execution plan provides a reference point for evaluating the effects of database indexing and query optimization in subsequent experiments.
+
+## 5. Baseline Performance Measurement
+
+Using EXPLAIN ANALYZE, the baseline query execution time was recorded as 0.133 milliseconds.
+
+This measurement will be used as a reference when comparing query performance after implementing database indexes.
