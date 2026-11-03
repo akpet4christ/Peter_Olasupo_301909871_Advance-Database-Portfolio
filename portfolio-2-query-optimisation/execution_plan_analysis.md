@@ -29,3 +29,13 @@ The baseline execution plan provides a reference point for evaluating the effect
 Using EXPLAIN ANALYZE, the baseline query execution time was recorded as 0.133 milliseconds.
 
 This measurement will be used as a reference when comparing query performance after implementing database indexes.
+
+## 6. Execution Plan After Index Creation
+
+After creating the index idx_lab_orders_patient_id on the patient_id column of the lab_orders table, I executed an EXPLAIN ANALYZE query to retrieve laboratory orders for a specific patient.
+
+PostgreSQL continued to use a Sequential Scan (Seq Scan) instead of an Index Scan.
+
+This is because the lab_orders table contains only five records. For a small table, PostgreSQL may determine that scanning all records is more efficient than accessing the index.
+
+This demonstrates that creating an index does not guarantee that PostgreSQL will use it. The query optimizer makes execution decisions based on estimated cost and available statistics.
