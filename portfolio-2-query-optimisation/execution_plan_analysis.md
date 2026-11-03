@@ -51,3 +51,15 @@ The post-index execution time was 0.252 milliseconds.
 The query took slightly longer after indexing. This is because the database contains a very small dataset, and PostgreSQL may find sequential scans more efficient than index scans.
 
 The results demonstrate that indexes do not always improve query performance, particularly when working with small tables. Query optimization depends on data size, query structure, available indexes, and the optimizer's cost estimates.
+
+## 8. Optimized Query Performance
+
+An optimized SQL query was created to retrieve selected patient and laboratory order columns, filtering for orders with a Completed status.
+
+The query returned two records successfully.
+
+Using EXPLAIN ANALYZE, the execution time was measured at 0.125 milliseconds.
+
+The original baseline query execution time was 0.133 milliseconds. The optimized query was therefore slightly faster in this test.
+
+However, the difference was very small and may be affected by the small dataset and normal execution-time variation. The exercise demonstrates the value of selecting only the required columns and applying appropriate filters.
