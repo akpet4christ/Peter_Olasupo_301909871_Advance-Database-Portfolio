@@ -10,3 +10,21 @@
 -- 3. SAVEPOINT
 -- 4. Transaction isolation
 -- 5. Transaction integrity
+
+-- =====================================================
+-- TEST 1: ROLLBACK AND DATA INTEGRITY
+-- =====================================================
+
+BEGIN;
+
+UPDATE lab_orders
+SET order_status = 'Pending'
+WHERE order_id = 1;
+
+-- Verified that the transaction could see Pending.
+
+ROLLBACK;
+
+-- Verified that order_id 1 returned to Completed.
+-- This demonstrates that uncommitted changes can
+-- be cancelled without permanently altering the data.
