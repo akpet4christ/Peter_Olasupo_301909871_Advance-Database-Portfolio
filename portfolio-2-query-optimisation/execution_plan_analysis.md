@@ -63,3 +63,11 @@ Using EXPLAIN ANALYZE, the execution time was measured at 0.125 milliseconds.
 The original baseline query execution time was 0.133 milliseconds. The optimized query was therefore slightly faster in this test.
 
 However, the difference was very small and may be affected by the small dataset and normal execution-time variation. The exercise demonstrates the value of selecting only the required columns and applying appropriate filters.
+
+## 9. Performance Measurement Limitation
+
+The baseline query and optimized query performed different operations. The baseline retrieved patient orders with provider details, while the optimized query retrieved selected patient and order columns and filtered for completed orders.
+
+Therefore, their execution times are useful observations but do not provide a controlled, direct comparison of performance.
+
+A fair performance comparison requires running the same query against the same dataset before and after a specific optimization.
