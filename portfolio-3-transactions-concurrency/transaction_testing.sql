@@ -114,3 +114,10 @@ VALUES (
 --
 -- This demonstrates database validation
 -- through CHECK constraints.
+
+-- TEST 5: UNIQUE constraint and data integrity
+-- Attempt to insert a patient using an existing medical record number.
+-- Expected result: PostgreSQL rejects the duplicate value.
+-- Constraint: patients_medical_record_no_key
+-- SQLSTATE: 23505 (unique_violation)
+-- Result: Test passed. Duplicate medical record numbers are prevented.
