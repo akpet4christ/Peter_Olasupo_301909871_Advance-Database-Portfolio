@@ -11,3 +11,26 @@
 -- 4. Transaction management
 -- 5. Concurrency control
 -- 6. Transaction isolation
+
+-- =====================================================
+-- EXERCISE 1: BASIC TRANSACTION CONTROL
+-- =====================================================
+
+-- Demonstrated BEGIN, UPDATE, COMMIT and ROLLBACK.
+-- Verified that COMMIT permanently saves changes.
+-- Restored order_id 1 to its original status.
+
+-- =====================================================
+-- EXERCISE 2: SAVEPOINT
+-- =====================================================
+
+BEGIN;
+
+SAVEPOINT first_savepoint;
+
+ROLLBACK TO SAVEPOINT first_savepoint;
+
+COMMIT;
+
+-- Demonstrated how SAVEPOINT allows partial rollback
+-- within a transaction without cancelling the entire transaction.
