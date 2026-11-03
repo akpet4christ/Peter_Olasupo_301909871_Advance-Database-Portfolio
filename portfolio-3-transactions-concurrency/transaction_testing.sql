@@ -87,3 +87,30 @@ VALUES (
 -- SQLSTATE: 23503
 --
 -- This demonstrates referential integrity.
+
+-- =====================================================
+-- TEST 4: CHECK CONSTRAINT AND DATA VALIDATION
+-- =====================================================
+
+-- Attempt to insert an invalid laboratory order status.
+
+INSERT INTO lab_orders (
+    patient_id,
+    provider_id,
+    ordered_at,
+    order_status
+)
+VALUES (
+    1,
+    1,
+    CURRENT_TIMESTAMP,
+    'InvalidStatus'
+);
+
+-- Expected result:
+-- PostgreSQL rejects the insertion.
+-- Constraint: chk_order_status
+-- SQLSTATE: 23514
+--
+-- This demonstrates database validation
+-- through CHECK constraints.
