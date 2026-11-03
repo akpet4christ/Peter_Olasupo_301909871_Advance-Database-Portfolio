@@ -39,3 +39,15 @@ PostgreSQL continued to use a Sequential Scan (Seq Scan) instead of an Index Sca
 This is because the lab_orders table contains only five records. For a small table, PostgreSQL may determine that scanning all records is more efficient than accessing the index.
 
 This demonstrates that creating an index does not guarantee that PostgreSQL will use it. The query optimizer makes execution decisions based on estimated cost and available statistics.
+
+## 7. Performance Comparison Before and After Indexing
+
+The baseline query execution time before creating indexes was 0.133 milliseconds.
+
+After creating indexes on lab_orders(patient_id) and lab_orders(provider_id), the same join query was executed again using EXPLAIN ANALYZE.
+
+The post-index execution time was 0.252 milliseconds.
+
+The query took slightly longer after indexing. This is because the database contains a very small dataset, and PostgreSQL may find sequential scans more efficient than index scans.
+
+The results demonstrate that indexes do not always improve query performance, particularly when working with small tables. Query optimization depends on data size, query structure, available indexes, and the optimizer's cost estimates.
