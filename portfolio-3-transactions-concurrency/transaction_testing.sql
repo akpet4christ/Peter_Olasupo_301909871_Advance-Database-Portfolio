@@ -61,3 +61,29 @@ ROLLBACK;
 -- Final verification:
 -- Order 1 = Completed
 -- Order 2 = In Progress
+
+-- =====================================================
+-- TEST 3: FOREIGN KEY CONSTRAINT AND DATA INTEGRITY
+-- =====================================================
+
+-- Attempt to insert an order for a nonexistent patient.
+
+INSERT INTO lab_orders (
+    patient_id,
+    provider_id,
+    ordered_at,
+    order_status
+)
+VALUES (
+    9999,
+    1,
+    CURRENT_TIMESTAMP,
+    'Pending'
+);
+
+-- Expected result:
+-- PostgreSQL rejects the insertion.
+-- Constraint: fk_order_patient
+-- SQLSTATE: 23503
+--
+-- This demonstrates referential integrity.
