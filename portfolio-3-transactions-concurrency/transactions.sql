@@ -34,3 +34,22 @@ COMMIT;
 
 -- Demonstrated how SAVEPOINT allows partial rollback
 -- within a transaction without cancelling the entire transaction.
+
+-- =====================================================
+-- EXERCISE 3: TRANSACTION ISOLATION
+-- =====================================================
+
+-- Check the default transaction isolation level.
+SHOW transaction_isolation;
+
+-- Set transaction isolation to REPEATABLE READ.
+BEGIN TRANSACTION
+ISOLATION LEVEL REPEATABLE READ;
+
+SHOW transaction_isolation;
+
+COMMIT;
+
+-- Verified that REPEATABLE READ was active inside
+-- the transaction. After COMMIT, the session returned
+-- to its default READ COMMITTED isolation level.
