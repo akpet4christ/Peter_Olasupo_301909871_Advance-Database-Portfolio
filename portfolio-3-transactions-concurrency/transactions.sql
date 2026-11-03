@@ -1,0 +1,13 @@
+-- =====================================================
+-- MEDILAB HOSPITAL LABORATORY SYSTEM
+-- PORTFOLIO 3: TRANSACTIONS AND CONCURRENCY
+-- DATABASE: PostgreSQL 18
+-- =====================================================
+
+-- This file contains practical exercises on:
+-- 1. Database transactions
+-- 2. COMMIT
+-- 3. ROLLBACK
+-- 4. Transaction management
+-- 5. Concurrency control
+-- 6. Transaction isolation
