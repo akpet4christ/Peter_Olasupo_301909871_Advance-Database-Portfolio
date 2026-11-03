@@ -1,0 +1,12 @@
+-- =====================================================
+-- MEDILAB HOSPITAL LABORATORY SYSTEM
+-- PORTFOLIO 3: TRANSACTION TESTING
+-- DATABASE: PostgreSQL 18
+-- =====================================================
+
+-- This file contains practical tests demonstrating:
+-- 1. BEGIN and COMMIT
+-- 2. ROLLBACK
+-- 3. SAVEPOINT
+-- 4. Transaction isolation
+-- 5. Transaction integrity
