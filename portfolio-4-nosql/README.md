@@ -24,7 +24,9 @@ The project will use MongoDB to demonstrate document-oriented database design, c
 
 ## Project Status
 
-In progress.
+Completed.
+
+All planned MongoDB practical exercises, documentation, and evidence screenshots have been completed and uploaded to this repository.
 
 ## MongoDB Practical Implementation
 
