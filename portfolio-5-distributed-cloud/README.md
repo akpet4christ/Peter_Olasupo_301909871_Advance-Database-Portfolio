@@ -25,36 +25,14 @@ The project focuses on understanding how databases distribute, replicate, and ma
 
 ## Practical Exercises
 
-### 1. MongoDB Replica Set Configuration
-- Configured MongoDB replication using a replica set.
-- Updated the MongoDB configuration file.
-- Initialized replica set `rs0`.
-- Verified that the node became PRIMARY.
-- Documented the single-node replica set limitation.
+1. **MongoDB Replication:** Configured a single-node MongoDB replica set and verified its PRIMARY state.
+2. **Database Synchronization:** Copied patient records between MongoDB databases and demonstrated manual synchronization.
+3. **MongoDB Sharding:** Simulated horizontal data distribution across three collections and examined shard keys and scalability.
+4. **Consistency and Availability:** Demonstrated stale data and manual reconciliation while studying consistency, availability, partition tolerance, and failover.
+5. **Cloud Database Deployment:** Created a MongoDB Atlas cloud cluster, connected through MongoDB Compass and Mongosh, created a cloud database, and inserted and queried patient records.
+6. **Cloud Database Technologies:** Compared MongoDB Atlas, Amazon DynamoDB, Azure Cosmos DB, and Amazon RDS, including their database models and use cases.
+7. **Cloud Deployment Models:** Studied public cloud, private cloud, hybrid cloud, and multi-cloud deployment models.
 
-### 2. MongoDB Data Synchronization
-- Created a target database named `medlab_sync`.
-- Copied patient records from `medlab_nosql`.
-- Verified document counts in both databases.
-- Updated a source patient record.
-- Manually synchronized the target record.
-- Verified that the target contained the updated information.
-
-### 3. MongoDB Sharding Simulation
-- Studied horizontal and vertical scaling.
-- Explored shard keys and MongoDB sharded cluster architecture.
-- Created three collections to simulate separate shards.
-- Distributed four patient records across the simulated shards.
-- Verified record distribution using `countDocuments()`.
-- Documented the limitations of the local simulation.
-
-### 4. Database Consistency and Availability
-- Explored consistency, availability, and partition tolerance.
-- Demonstrated temporary inconsistency between source and target databases.
-- Updated a source patient record.
-- Manually synchronized the target record.
-- Verified that both records contained the latest update.
-- Studied the CAP theorem and failover concepts.
 
 ## Project Status
 
