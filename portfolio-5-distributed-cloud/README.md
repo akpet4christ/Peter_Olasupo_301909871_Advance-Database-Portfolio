@@ -36,12 +36,14 @@ The project focuses on understanding how databases distribute, replicate, and ma
 
 ## Project Status
 
-<badge color="success">Practical exercises completed so far</badge>
+<badge>Completed</badge>
 
-- MongoDB replica set configuration and documentation completed.
-- MongoDB data synchronization completed.
-- MongoDB sharding simulation completed.
-- Consistency and availability demonstration completed.
-- Cloud database technologies and deployment models: Pending.
-- Centralized versus distributed database comparison: Pending.
-- Final evidence collection and portfolio review: Pending.
+All five portfolio practical areas have been completed:
+
+- MongoDB replication
+- Database synchronization
+- MongoDB sharding simulation
+- Consistency and availability
+- Cloud database deployment using MongoDB Atlas
+
+Documentation for the practical exercises has been created and committed. Evidence screenshots will be uploaded together after the portfolio exercises are finalized.
