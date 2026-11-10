@@ -33,6 +33,34 @@ The project focuses on understanding how databases distribute, replicate, and ma
 6. **Cloud Database Technologies:** Compared MongoDB Atlas, Amazon DynamoDB, Azure Cosmos DB, and Amazon RDS, including their database models and use cases.
 7. **Cloud Deployment Models:** Studied public cloud, private cloud, hybrid cloud, and multi-cloud deployment models.
 
+## Key Learning Outcomes
+
+Through this portfolio, I developed practical knowledge and understanding of:
+
+1. **MongoDB Replication:** Configuring a replica set and understanding primary node operations, replication, and fault tolerance.
+2. **Database Synchronization:** Transferring patient records between databases, verifying data integrity, and performing manual synchronization.
+3. **Database Sharding:** Understanding shard keys, horizontal scaling, and distributed data storage.
+4. **Consistency and Availability:** Understanding the CAP theorem, data consistency, availability, partition tolerance, and failover.
+5. **Cloud Database Deployment:** Creating and accessing a cloud-hosted MongoDB database using MongoDB Atlas, Compass, and Mongosh.
+6. **Cloud Database Technologies:** Comparing MongoDB Atlas, Amazon DynamoDB, Azure Cosmos DB, and Amazon RDS.
+7. **Cloud Deployment Models:** Understanding public cloud, private cloud, hybrid cloud, and multi-cloud environments.
+
+## Project Structure
+
+```text
+portfolio-5-distributed-cloud/
+│
+├── README.md
+├── mongodb_replication.md
+├── mongodb_synchronization.md
+├── mongodb_sharding.md
+├── consistency_availability.md
+└── cloud_database_deployment.md
+```
+
+**Documentation:** Each Markdown file contains the objectives, implementation steps, commands, results, and learning points for its respective practical exercise.
+
+**Evidence:** Practical screenshots will be organized and uploaded together after the portfolio exercises are finalized.
 
 ## Project Status
 
